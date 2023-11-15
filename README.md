@@ -1,4 +1,18 @@
-# AngularstartTodo
+# Angularstart Todo
+
+## Description
+
+It is the most cliche example ever, but it’s a great starting point. I'm going to build a super simple todo application. All I want this application to do is:
+
+- Allow us to create a todo with a title and a description
+- Allow us to select a todo and view its details on a separate page
+
+### Concept
+
+> [!NOTE]
+> - Using SCSS for styling
+> - Will be using “single file components” — meaning that both template and styles will be defined in the same file as component, rather than being split into separate files
+> - Not worrying about automated tests in this app, so can ignore the test files for now..
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0-rc.3.
 
