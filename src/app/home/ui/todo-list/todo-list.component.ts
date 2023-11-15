@@ -17,7 +17,11 @@ import { Todo } from '../../../shared/interfaces/todo';
       }
     </ul>
   `,
-  styles: ``
+  styles: `
+        ul {
+        margin: 0;
+        padding: 1rem;
+      }`
 })
 export class TodoListComponent {
   @Input({ required: true }) todos!: Todo[];
