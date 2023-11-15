@@ -6,7 +6,7 @@ import { Todo } from '../../../shared/interfaces/todo';
   standalone: true,
   template: `
     <ul>
-      @for (todo of todos; track $index) {
+      @for (todo of todos; track todo.id) {
         <li>
           <a>{{ todo.title }}</a>
         </li>
