@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Todo } from '../shared/interfaces/todo';
+import { Component, inject } from '@angular/core';
+import { TodoService } from '../shared/data-access/todo.service';
 import { TodoFormComponent } from "./ui/todo-form/todo-form.component";
 
 @Component({
@@ -7,13 +7,11 @@ import { TodoFormComponent } from "./ui/todo-form/todo-form.component";
     standalone: true,
     template: `
     <h2>Todo</h2>
-    <app-todo-form (todoSubmitted)="createTodo($event)"/>
+    <app-todo-form (todoSubmitted)="this.todoService.addTodo($event)"/>
   `,
     styles: ``,
     imports: [TodoFormComponent]
 })
 export default class HomeComponent {
-  createTodo(todo: Todo) {
-    console.log(todo);
-  }
+  todoService = inject(TodoService);
 }
